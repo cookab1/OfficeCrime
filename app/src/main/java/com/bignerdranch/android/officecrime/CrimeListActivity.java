@@ -1,6 +1,6 @@
 package com.bignerdranch.android.officecrime;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 
 /**
  * Created by user on 9/18/2017.
@@ -9,6 +9,6 @@ import android.app.Fragment;
 public class CrimeListActivity extends SingleFragmentActivity {
     @Override
     protected Fragment createFragment() {
-        return new CrimeListActivity();
+        return new CrimeListFragment();
     }
 }
