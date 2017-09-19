@@ -8,4 +8,4 @@ public class CrimeActivity extends SingleFragmentActivity {
     protected Fragment createFragment() {
         return new CrimeFragment();
     }
-}
+} 
