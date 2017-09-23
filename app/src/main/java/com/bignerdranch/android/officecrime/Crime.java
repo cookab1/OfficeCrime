@@ -34,7 +34,9 @@ public class Crime {
         return mDate;
     }
 
-    public void setDate(Date date) { this.mDate = date; }
+    public void setDate(Date date) {
+        mDate = date;
+    }
 
     public boolean isSolved() {
         return mSolved;
