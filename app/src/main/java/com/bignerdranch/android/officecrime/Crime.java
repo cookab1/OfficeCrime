@@ -15,7 +15,9 @@ public class Crime {
 
     public Crime() {
         mId = UUID.randomUUID();
+        //SimpleDateFormat df = new SimpleDateFormat("EEE, MMM d");
         mDate = new Date();
+        //mDate = df.parse(mDate.toString());
     }
 
     public UUID getId() {
