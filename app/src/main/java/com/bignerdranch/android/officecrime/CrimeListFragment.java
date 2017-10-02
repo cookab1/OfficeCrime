@@ -86,6 +86,10 @@ public class CrimeListFragment extends Fragment {
         public int getItemCount() {
             return mCrimes.size();
         }
+
+        public void setCrimes(List<Crime> crimes) {
+            mCrimes = crimes;
+        }
     }
 
     @Override
@@ -129,7 +133,7 @@ public class CrimeListFragment extends Fragment {
     }
 
     //@Override
-    public boolean onOptionItemSelected(MenuItem item){
+    public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()) {
             case R.id.new_crime:
                 Crime crime = new Crime();
@@ -166,8 +170,10 @@ public class CrimeListFragment extends Fragment {
         if (mAdapter == null) {
             mAdapter = new CrimeAdapter(crimes);
             mCrimeRecyclerView.setAdapter(mAdapter);
-        } else
+        } else {
+            mAdapter.setCrimes(crimes);
             mAdapter.notifyDataSetChanged();
+        }
 
         updateSubtitle();
     }
